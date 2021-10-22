@@ -25,6 +25,7 @@ img {
 /* サイト内全体で使いまわしたいもの */
 /* モジュール自体にレイアウトに関する指定は基本的に行わない */
 /* position, top, rigth, bottom, left, width, margin etc... */
+/* 要素の直接指定は密結合を生み出すため、クラス名をつけて疎結合にすること */
 /* =============================== */
 #main span {
   color: #555;
@@ -38,27 +39,27 @@ img {
   line-height: 1.5;
 }
 
-#main div.bl_module.main-module figure {
+#main div.bl_module.main-module .image-wrapper {
   flex: 1 1 25%;
   margin-right: 3.33333%;
 }
 
-#main div.bl_module.main-module img {
+#main div.bl_module.main-module .image-wrapper img {
   width: 100%;
   vertical-align: top;
 }
 
-#main div.bl_module.main-module div {
+#main div.bl_module.main-module .body {
   flex: 1 1 68.33333%;
 }
 
-#main div.bl_module.main-module h2 {
+#main div.bl_module.main-module .title {
   margin-bottom: 10px;
   font-size: 18px;
   font-weight: bold;
 }
 
-#main div.bl_module.main-module h3 {
+#main div.bl_module.main-module .sub-title {
   margin-top: 10px;
   margin-bottom: 10px;
   font-size: 16px;
