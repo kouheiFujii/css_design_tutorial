@@ -41,6 +41,19 @@ img {
   line-height: 1.5;
 }
 
+.bl_media__rev {
+  flex-direction: row-reverse;
+  text-align: right;
+}
+/* モディファイア（__rev）をつけるのは最小限に抑え、子孫セレクターで指定する */
+.bl_media__rev .bl_media_imageWrapper {
+  margin-right: 0;
+}
+
+.bl_media__rev .bl_media_body {
+  margin-right: 3.33333%;
+}
+
 .bl_media_imageWrapper {
   flex: 1 1 25%;
   margin-right: 3.33333%;
