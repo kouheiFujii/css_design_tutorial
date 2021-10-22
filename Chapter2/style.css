@@ -26,8 +26,9 @@ img {
 /* モジュール自体にレイアウトに関する指定は基本的に行わない */
 /* position, top, rigth, bottom, left, width, margin etc... */
 /* 要素の直接指定は密結合を生み出すため、クラス名をつけて疎結合にすること */
+/* スコープを広くしすぎない */
 /* =============================== */
-#main span {
+#main .bl_module.main-module .body > span {
   color: #555;
   font-size: 14px;
 }
