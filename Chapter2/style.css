@@ -1,0 +1,82 @@
+/* ベース ======================== */
+/* サイト全体に適用されるべきグループ
+================================ */
+body {
+  font-family: sans-serif;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* レイアウト ===================== */
+/* レイアウトに関するスタイル */
+/* ============================== */
+.ly_cont {
+  max-width: 1200px;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+/* モジュール======================= */
+/* サイト内全体で使いまわしたいもの */
+/* モジュール自体にレイアウトに関する指定は基本的に行わない */
+/* position, top, rigth, bottom, left, width, margin etc... */
+/* 要素の直接指定は密結合を生み出すため、クラス名をつけて疎結合にすること */
+/* スコープを広くしすぎない */
+/* どこでも使えるようにする。みだりに依存しない。 */
+/* =============================== */
+.bl_media .bl_media_body > span {
+  color: #555;
+  font-size: 14px;
+}
+
+.bl_media {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.bl_media__rev {
+  flex-direction: row-reverse;
+  text-align: right;
+}
+/* モディファイア（__rev）をつけるのは最小限に抑え、子孫セレクターで指定する */
+.bl_media__rev .bl_media_imageWrapper {
+  margin-right: 0;
+}
+
+.bl_media__rev .bl_media_body {
+  margin-right: 3.33333%;
+}
+
+.bl_media_imageWrapper {
+  flex: 1 1 25%;
+  margin-right: 3.33333%;
+}
+
+.bl_media_imageWrapper img {
+  width: 100%;
+  vertical-align: top;
+}
+
+.bl_media_body {
+  flex: 1 1 68.33333%;
+}
+
+.bl_media_title {
+  margin-bottom: 10px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.subTitle {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 16px;
+  border-bottom: 1px solid #555;
+}
